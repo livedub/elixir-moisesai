@@ -28,17 +28,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 config :moises_ai, MoisesAI,
   api_key: "your api key",
 ```
-
-
-## Composable design, Data structure oriented
-
-```elixir
-  import MoisesAI.Param
-  MoisesAI.new
-  |> put_heading("Welcome!")
-  |> put_message(:en, "Hello")
-  |> put_message(:ja, "はろー")
-  |> put_segment("Free Players")
-  |> put_segment("New Players")
-  |> notify
-```
