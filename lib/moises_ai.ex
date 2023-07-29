@@ -27,7 +27,7 @@ defmodule MoisesAI do
   end
 
   defp config do
-    Application.get_env(:moisesai, MoisesAI)
+    Application.get_env(:moises_ai, MoisesAI)
   end
 
   defp fetch_api_key do

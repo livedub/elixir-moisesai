@@ -4,7 +4,7 @@ defmodule MoisesAI.Mixfile do
   @description "Elixir wrapper of Moises.AI"
 
   def project do
-    [app: :moisesai,
+    [app: :moises_ai,
      version: "1.0.0",
      elixir: "~> 1.5",
      build_embedded: Mix.env == :prod,
