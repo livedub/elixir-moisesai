@@ -31,6 +31,7 @@ defmodule MoisesAI.Mixfile do
 
   defp deps do
     [
+      {:poison, "~> 3.0"},
       {:httpoison, "~> 2.0"},
       {:ex_doc, "~> 0.8.0", only: :docs}
     ]
