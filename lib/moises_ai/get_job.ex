@@ -1,6 +1,6 @@
 
 defmodule MoisesAI.GetJob do
-  defstruct id: nil, name: nil, status: nil, workflow: %{}, workflowParams: %{}, result: %{}, createdAt: nil, startedAt: nil, completedAt: nil
+  defstruct id: nil, name: nil, status: nil, workflow: nil, app: nil, batchName: nil, workflowParams: %{}, result: %{}, createdAt: nil, startedAt: nil, completedAt: nil
 
   def parse(response) do
     response = Enum.map(response, &to_key_atom/1)
