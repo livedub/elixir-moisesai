@@ -1,4 +1,4 @@
-defmodule Moises.Ai do
+defmodule MoisesAI.Utils do
   @doc """
   Encode request body
   """
