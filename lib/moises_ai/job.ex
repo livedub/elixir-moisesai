@@ -11,12 +11,11 @@ defmodule MoisesAI.Job do
 
   @doc """
   Get job
-  iex> MoisesAI.Job.get(%{"en" => "Hello!", "ja" => "はろー"}, %{"included_segments" => ["All"], "isAndroid" => true})
   """
   def get(workflowId) do
     case MoisesAI.API.get(get_job_url(workflowId), []) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
-        {:ok, body}
+        MoisesAI.GetJob.parse(body)
       {:ok, %HTTPoison.Response{status_code: status_code}} ->
         {:error, "Request failed with status: #{status_code}"}
       err -> err
@@ -25,7 +24,6 @@ defmodule MoisesAI.Job do
 
   @doc """
   Send job
-  iex> MoisesAI.Job.post(%{"en" => "Hello!", "ja" => "はろー"}, %{"included_segments" => ["All"], "isAndroid" => true})
   """
   def post(contents, opts) do
     param = %{"contents" => contents}
