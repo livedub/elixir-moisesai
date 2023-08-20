@@ -22,7 +22,7 @@ defmodule MoisesAI do
   end
 
   def auth_header do
-    %{"Authorization" => "Basic " <> fetch_api_key(),
+    %{"Authorization" => "" <> fetch_api_key(),
       "Content-type" => "application/json"}
   end
 
